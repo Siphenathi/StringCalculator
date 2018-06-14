@@ -11,8 +11,7 @@ namespace StringCalculator.Test
         [TestCase(null, 0)]
         public void Add_GivenInValidInput_ShouldReturnZero(string input, int expected)
         {
-            //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var actual = sut.Add(input);
@@ -27,7 +26,7 @@ namespace StringCalculator.Test
         public void Add_GivenValidInput_ShouldReturnSum(string input, int expected)
         {
             //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var actual = sut.Add(input);
@@ -42,7 +41,7 @@ namespace StringCalculator.Test
         public void Add_GivenValidInputWithLine_ShouldReturnSum(string input, int expected)
         {
             //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var actual = sut.Add(input);
@@ -57,7 +56,7 @@ namespace StringCalculator.Test
         public void Add_GivenValidInputWithLineAndDelimiter_ShouldReturnSum(string input, int expected)
         {
             //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var actual = sut.Add(input);
@@ -72,7 +71,7 @@ namespace StringCalculator.Test
         public void Add_GivenValidInputWithLine_DelimiterAndNegativeNumbers_ShouldThrowException(string input, string expectedMessage)
         {
             //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var exception = Assert.Throws<Exception>(() => sut.Add(input));
@@ -87,7 +86,7 @@ namespace StringCalculator.Test
         public void Add_GivenInputWithLine_DelimiterAndNumbersEqualOrBiggerThan1000_ShouldExcludeNumbersEqualOrBiggerThan1000InSum(string input, int expectedSum)
         {
             //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var actual = sut.Add(input);
@@ -102,7 +101,7 @@ namespace StringCalculator.Test
         public void Add_GivenInputWithLine__And_2Delimiters_ShouldRetrunSumOfNumbersProvided(string input, int expectedSum)
         {
             //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var actual = sut.Add(input);
@@ -116,12 +115,18 @@ namespace StringCalculator.Test
         public void Add_GivenInputWithLine__And_ManyDelimiters_ShouldRetrunSumOfNumbersProvided(string input, int expectedSum)
         {
             //Arrange 
-            var sut = new StringCalculatorLogic();
+            var sut = CreateStringCalculator();
 
             //Act
             var actual = sut.Add(input);
             //Assert
             Assert.AreEqual(expectedSum, actual);
+        }
+
+        private static StringCalculatorLogic CreateStringCalculator()
+        {
+            //Arrange 
+            return new StringCalculatorLogic();
         }
 
     }
