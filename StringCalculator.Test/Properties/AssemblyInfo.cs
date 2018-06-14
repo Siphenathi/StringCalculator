@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StringCalculator.Test")]
+[assembly: AssemblyProduct("StringCalculatorLogic.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f689e9ab-005e-48c0-b14b-b37eb8eaf456")]
+[assembly: Guid("87be82e2-65df-44e6-8e5f-b383e2b0d4d6")]
 
 // Version information for an assembly consists of the following four values:
 //
