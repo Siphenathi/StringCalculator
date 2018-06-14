@@ -105,6 +105,7 @@ namespace StringCalculator.Test
 
             //Act
             var actual = sut.Add(input);
+
             //Assert
             Assert.AreEqual(expectedSum, actual);
         }
@@ -119,13 +120,13 @@ namespace StringCalculator.Test
 
             //Act
             var actual = sut.Add(input);
+
             //Assert
             Assert.AreEqual(expectedSum, actual);
         }
 
         private static StringCalculatorLogic CreateStringCalculator()
         {
-            //Arrange 
             return new StringCalculatorLogic();
         }
 
