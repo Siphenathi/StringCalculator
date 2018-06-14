@@ -84,7 +84,7 @@ namespace StringCalculator.Business
             return input;
         }
 
-        public static int GetLastBracketIndex(string input)
+        private static int GetLastBracketIndex(string input)
         {
             var index = 0;
 
